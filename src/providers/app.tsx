@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './theme';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -7,5 +9,9 @@ type AppProviderProps = {
 };
 
 export const AppProvider = ({ children }: AppProviderProps) => {
-  return <Router>{children}</Router>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>{children}</Router>
+    </ThemeProvider>
+  );
 };
