@@ -1,8 +1,14 @@
 import React from 'react';
+import { AppProvider } from 'providers/app';
 import './App.css';
+import { AppRoutes } from 'routes';
 
 function App() {
-  return <div className="App">hello world</div>;
+  return (
+    <AppProvider>
+      <AppRoutes />
+    </AppProvider>
+  );
 }
 
 export default App;
