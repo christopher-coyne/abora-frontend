@@ -1,4 +1,3 @@
-import React from 'react';
 import { AppProvider } from 'providers/app';
 import './App.css';
 import { AppRoutes } from 'routes';

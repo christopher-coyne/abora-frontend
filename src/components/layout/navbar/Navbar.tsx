@@ -1,5 +1,10 @@
 import { Nav } from './styles';
 
 export function Navbar() {
-  return <Nav>Navbar</Nav>;
+  return (
+    <Nav>
+      <div>Abora JS</div>
+      <div>About contact Login</div>
+    </Nav>
+  );
 }
