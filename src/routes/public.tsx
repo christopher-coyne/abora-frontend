@@ -1,4 +1,4 @@
-import { Test } from 'features/misc/routes';
+import { Test } from 'features/Posts/routes';
 
 export const publicRoutes = [
   {

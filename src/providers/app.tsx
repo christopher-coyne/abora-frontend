@@ -2,6 +2,8 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 
+import { AuthProvider } from './Authprovider';
+
 import { BrowserRouter as Router } from 'react-router-dom';
 
 type AppProviderProps = {
@@ -11,7 +13,9 @@ type AppProviderProps = {
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <Router>{children}</Router>
+      <AuthProvider>
+        <Router>{children}</Router>
+      </AuthProvider>
     </ThemeProvider>
   );
 };
