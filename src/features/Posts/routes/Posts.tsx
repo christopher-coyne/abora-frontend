@@ -1,7 +1,7 @@
-import { Navbar } from 'components/layout/navbar/Navbar';
 import { Post } from '../types';
 import { PostCard } from '../components/PostCard/PostCard';
 import { PostGrid } from './styles';
+import MainLayout from 'components/Layout/MainLayout/MainLayout';
 
 export function Posts() {
   const login = () => {
@@ -64,8 +64,7 @@ export function Posts() {
     },
   ];
   return (
-    <div>
-      <Navbar />
+    <MainLayout>
       <PostGrid>
         {fakePosts.map((post) => {
           return <PostCard key={post.id} post={post} />;
@@ -73,6 +72,6 @@ export function Posts() {
       </PostGrid>
       Landing
       <button onClick={() => login()}>Login</button>
-    </div>
+    </MainLayout>
   );
 }
