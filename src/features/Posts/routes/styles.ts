@@ -7,7 +7,6 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid red;
 
   font-family: 'nunito';
 
@@ -24,4 +23,5 @@ export const Nav = styled.nav`
 export const PostGrid = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 3vw;
 `;

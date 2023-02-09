@@ -8,8 +8,8 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: 1px solid red;
 
+  box-shadow: 0px 0px 10px black;
   font-family: 'nunito';
 
   & ul {
