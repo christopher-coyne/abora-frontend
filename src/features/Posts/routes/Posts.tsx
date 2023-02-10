@@ -3,6 +3,7 @@ import { PostCard } from '../components/PostCard/PostCard';
 import { PostGrid } from './styles';
 import { usePosts } from '../api/getPosts';
 import MainLayout from 'components/Layout/MainLayout/MainLayout';
+import SearchBar from '../components/Searchbar/SearchBar';
 
 export function Posts() {
   const login = () => {
@@ -12,6 +13,7 @@ export function Posts() {
   const { isLoading, data } = usePosts();
   return (
     <MainLayout>
+      <SearchBar />
       {!!data && (
         <PostGrid>
           {data.map((post) => {
