@@ -70,7 +70,11 @@ const fakePosts: Post[] = [
 
 export const getPosts = (): Promise<Post[]> => {
   // return axios.get(`/posts`);
-  return Promise.resolve(fakePosts);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(fakePosts);
+    }, 3000);
+  });
 };
 
 export const usePosts = () => {

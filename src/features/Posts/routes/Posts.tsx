@@ -1,4 +1,5 @@
 import { Post } from '../types';
+import { Loading } from 'components/Primitives/Loading';
 import { PostCard } from '../components/PostCard/PostCard';
 import { PostGrid } from './styles';
 import { usePosts } from '../api/getPosts';
@@ -14,12 +15,14 @@ export function Posts() {
   return (
     <MainLayout>
       <SearchBar />
-      {!!data && (
+      {data ? (
         <PostGrid>
           {data.map((post) => {
             return <PostCard key={post.id} post={post} />;
           })}
         </PostGrid>
+      ) : (
+        <Loading />
       )}
       Landing
       <button onClick={() => login()}>Login</button>
