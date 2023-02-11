@@ -1,5 +1,6 @@
 import { Post } from 'features/Posts/types';
 import { Card, Thumbnail, Title, TitleContainer, Likes, Poster } from './styles';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
@@ -11,14 +12,16 @@ type Props = {
 export function PostCard({ post }: Props) {
   return (
     <Card>
-      <Thumbnail />
-      <TitleContainer>
-        <Title>{post.name}</Title>
-        <Likes>
-          {post.likes} <FontAwesomeIcon icon={faThumbsUp} />
-        </Likes>
-      </TitleContainer>
-      <Poster>{post.poster}</Poster>
+      <Link to={`post/${post.id}`}>
+        <Thumbnail />
+        <TitleContainer>
+          <Title>{post.name}</Title>
+          <Likes>
+            {post.likes} <FontAwesomeIcon icon={faThumbsUp} />
+          </Likes>
+        </TitleContainer>
+        <Poster>{post.poster}</Poster>
+      </Link>
     </Card>
   );
 }
