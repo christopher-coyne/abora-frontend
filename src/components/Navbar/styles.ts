@@ -23,15 +23,6 @@ export const Nav = styled.nav`
         text-decoration: none;
         color: black;
       }
-
-      & button {
-        background-color: #3a3a3a;
-        padding: 6px 14px;
-        border-radius: 5px;
-        border: none;
-        color: white;
-        font-size: 16px;
-      }
     }
   }
 `;
