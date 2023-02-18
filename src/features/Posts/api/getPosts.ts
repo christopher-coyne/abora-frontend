@@ -68,8 +68,11 @@ const fakePosts: Post[] = [
   },
 ];
 
-export const getPosts = (): Promise<Post[]> => {
+export const getPosts = async (search: any): Promise<Post[]> => {
   // return axios.get(`/posts`);
+  console.log('axios search : ', search.get('sortby'));
+  const res = await axios.get('/', { withCredentials: true });
+  console.log('res ', res);
   console.log('getting post from useposts...');
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -78,9 +81,10 @@ export const getPosts = (): Promise<Post[]> => {
   });
 };
 
-export const usePosts = () => {
+export const usePosts = (search: any) => {
+  console.log('search from get posts : ', search);
   return useQuery({
     queryKey: ['posts'],
-    queryFn: () => getPosts(),
+    queryFn: () => getPosts(search),
   });
 };

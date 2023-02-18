@@ -6,6 +6,10 @@ export default function SearchBar() {
   // Get the userId param from the URL.
   const [search, setSearch] = useSearchParams();
 
+  // console.log('search search bar ', search.get('sortby'));
+  const sortString = search.get('sortby');
+  const placeholder = sortString || 'Sort By: Newest';
+
   const selectItems = {
     items: [
       {
@@ -29,7 +33,7 @@ export default function SearchBar() {
         setSearch(newParams);
       }
     },
-    placeholder: 'Sort By: Newest',
+    placeholder,
   };
 
   return (
