@@ -11,6 +11,7 @@ type SelectProps = {
     }[];
     callback: (value: string) => void;
     placeholder: string;
+    prefix?: string;
   };
 };
 
@@ -26,7 +27,9 @@ export const RadixSelect = ({ config }: SelectProps) => {
   return (
     <Select.Root value={value} onValueChange={setValue}>
       <Select.Trigger className="SelectTrigger" aria-label="Sort By">
-        <Select.Value aria-label={value}>{value}</Select.Value>
+        <Select.Value aria-label={value}>
+          {config.prefix && config.prefix} {value}
+        </Select.Value>
         <Select.Icon className="SelectIcon">
           <ChevronDownIcon />
         </Select.Icon>

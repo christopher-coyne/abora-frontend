@@ -8,7 +8,7 @@ export default function SearchBar() {
 
   // console.log('search search bar ', search.get('sortby'));
   const sortString = search.get('sortby');
-  const placeholder = sortString || 'Sort By: Newest';
+  const placeholder = sortString || 'Newest';
 
   const selectItems = {
     items: [
@@ -29,11 +29,12 @@ export default function SearchBar() {
       console.log('hey');
       if (value !== 'Sort By: Newest') {
         console.log('val ', value);
-        const newParams = { ...search, sortby: value };
-        setSearch(newParams);
+        search.set('sortby', value);
+        setSearch(search);
       }
     },
     placeholder,
+    prefix: 'Sort By:',
   };
 
   return (

@@ -5,10 +5,12 @@ import { useState } from 'react';
 
 export function Filters() {
   const [search, setSearch] = useSearchParams();
-  /*
-  const [modelValue, setModelValue] = useState('All Models')
-  const [modelValue, setModelValue] = useState('All Models')
-  */
+  const model = search.get('model');
+  const modelPlaceholder = model || 'All Models';
+
+  const medium = search.get('medium');
+  const mediumPlaceholder = medium || 'All Media';
+
   console.log('search from filters ', search.get('model'));
   const modelSelect = {
     items: [
@@ -24,6 +26,10 @@ export function Filters() {
         value: 'DALLE',
         text: 'DALLE',
       },
+      {
+        value: 'All Models',
+        text: 'All Models',
+      },
     ],
     callback: (value: string) => {
       console.log('hey');
@@ -34,7 +40,7 @@ export function Filters() {
         setSearch(search);
       }
     },
-    placeholder: 'All Models',
+    placeholder: modelPlaceholder,
   };
 
   const mediumSelect = {
@@ -51,6 +57,10 @@ export function Filters() {
         value: 'Digital Art',
         text: 'Digital Art',
       },
+      {
+        value: 'All Media',
+        text: 'All Media',
+      },
     ],
     callback: (value: string) => {
       console.log('hey');
@@ -60,9 +70,9 @@ export function Filters() {
         setSearch(search);
       }
     },
-    placeholder: 'All Media',
+    placeholder: mediumPlaceholder,
   };
-  /*
+
   return (
     <Container>
       <h3>Add Filter</h3>
@@ -72,6 +82,4 @@ export function Filters() {
       </FiltersContainer>
     </Container>
   );
-  */
-  return <div>filters</div>;
 }

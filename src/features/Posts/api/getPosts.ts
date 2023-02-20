@@ -66,6 +66,55 @@ const fakePosts: Post[] = [
     likes: 16,
     imgLink: '/abc',
   },
+  {
+    id: '2342',
+    poster: 'Joel Parsons',
+    name: 'Brochure Template',
+    likes: 16,
+    imgLink: '/abc',
+  },
+  {
+    id: '98766',
+    poster: 'Sarah Goetz',
+    name: 'Blinding Light',
+    likes: 16,
+    imgLink: '/abc',
+  },
+  {
+    id: '887655',
+    poster: 'Scott Olsen',
+    name: 'Rain',
+    likes: 16,
+    imgLink: '/abc',
+  },
+  {
+    id: '338474',
+    poster: 'Brianna Smith',
+    name: 'Looking Back',
+    likes: 16,
+    imgLink: '/abc',
+  },
+  {
+    id: '9399',
+    poster: 'Mark Wyatt',
+    name: 'AI art site',
+    likes: 16,
+    imgLink: '/abc',
+  },
+  {
+    id: '939090',
+    poster: 'Mary Jameson',
+    name: 'The Wild',
+    likes: 16,
+    imgLink: '/abc',
+  },
+  {
+    id: '00001',
+    poster: 'Pete Thompson',
+    name: 'Neon and Silk',
+    likes: 16,
+    imgLink: '/abc',
+  },
 ];
 
 export const getPosts = async (search: any): Promise<Post[]> => {
