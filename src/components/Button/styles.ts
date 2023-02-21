@@ -27,3 +27,16 @@ export const Oauth = styled.button`
     background-color: #5f3865;
   }
 `;
+
+export const RadioLabel = styled.label`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+`;
