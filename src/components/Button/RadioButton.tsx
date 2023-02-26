@@ -9,8 +9,10 @@ type RadioButtonProps = {
 export function RadioButton({ input, name }: RadioButtonProps) {
   return (
     <>
-      <input id={input} type="radio" name={name} />
-      <label htmlFor={input}>{input}</label>
+      <input id={input} type="radio" name={name} className="radioInput" />
+      <label htmlFor={input} className="radioLabel">
+        {input}
+      </label>
     </>
   );
 }
